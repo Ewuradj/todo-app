@@ -7,7 +7,7 @@ function AddTodo() {
     const [todos, setTodos] = useLocalStorage
     ("TODO_KEY", []);
     // let todo;
-    const [todo, setTodos] = useState("")
+    const [todo, setTodos] = useState("");
     
     
 
@@ -17,6 +17,9 @@ function AddTodo() {
 
         // console.log(event.target.value);
 
+    }
+    const collectInput = (event) =>{
+        setTodo(event.target.value);
     }
     function saveTodo() {
         let todos = JSON.parse (localStorage.getItem("TODO_KEY")) || [];
